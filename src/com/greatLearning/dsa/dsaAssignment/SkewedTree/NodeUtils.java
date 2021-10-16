@@ -61,7 +61,7 @@ class NodeUtils {
 
 // Function to traverse the right
 // skewed tree using recursion
-	static void traverseRightSkewed(Node root) {
+	static void traverseRightSkewed_ascending(Node root) {
 		if (root == null) {
 			return;
 		}
@@ -72,6 +72,20 @@ class NodeUtils {
 			root.right.val = temp;
 
 		}
+		System.out.print(root.val + " ");
+		traverseRightSkewed(root.right);
+	}
+	static void traverseRightSkewed(Node root) {
+		if (root == null) {
+			return;
+		}
+//		if (root.right != null && root.val > root.right.val) {
+//			int temp;
+//			temp = root.val;
+//			root.val = root.right.val;
+//			root.right.val = temp;
+//
+//		}
 		System.out.print(root.val + " ");
 		traverseRightSkewed(root.right);
 	}
