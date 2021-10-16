@@ -54,7 +54,7 @@ public class SkyScrapperSolution {
 					System.out.print("Day " + day + " : " + poll + " ");
 					Collections.sort(forRemainingElements, Collections.reverseOrder());
 					for (int k = 0; k < forRemainingElements.size(); k++) {
-						System.out.print(forRemainingElements.get(k) + "  ");
+						System.out.print(forRemainingElements.get(k) + " ");
 
 					}
 				} else {
@@ -97,7 +97,7 @@ public class SkyScrapperSolution {
 	public static void main(String[] args) throws Exception {
 		SkyScrapperSolution arr = new SkyScrapperSolution();
 
-		System.out.println("Enter the floor size :");
+		System.out.println("Enter the total no. of floors in the building :");
 		Scanner scanner = new Scanner(System.in);
 		availableFloorSize = scanner.nextInt();
 
