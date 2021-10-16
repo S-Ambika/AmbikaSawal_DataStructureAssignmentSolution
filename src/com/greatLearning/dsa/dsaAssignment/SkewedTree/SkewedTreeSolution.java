@@ -2,7 +2,7 @@ package com.greatLearning.dsa.dsaAssignment.SkewedTree;
 
 class SkewedTreeSolution {
 
-    static Node node;
+	static Node node;
 	static int order = 0;
 
 	// Driver Code
@@ -14,20 +14,19 @@ class SkewedTreeSolution {
 	 *  /    /
 	 *  10   40
 	 */
-		
-		SkewedTreeSolution.node = new Node(50);
-		SkewedTreeSolution.node.left = new Node(30);
-		SkewedTreeSolution.node.right = new Node(60);
-		SkewedTreeSolution.node.left.left = new Node(10);
-		SkewedTreeSolution.node.right.left = new Node(40);
-		NodeUtils.flattenBTToSkewed(node, order);
 
-		
-		System.out.println("Right Skewed Binary Tree In Order Traversal : ");
-		NodeUtils.traverseRightSkewed(NodeUtils.headNode);
-		System.out.println();
-		System.out.println("Right Skewed Binary Tree In Ascending Order : ");
-		NodeUtils.traverseRightSkewed_ascending(NodeUtils.headNode);
+	SkewedTreeSolution.node = new Node(50);
+	SkewedTreeSolution.node.left = new Node(30);
+	SkewedTreeSolution.node.right = new Node(60);
+	SkewedTreeSolution.node.left.left = new Node(10);
+	SkewedTreeSolution.node.right.left = new Node(40);
+	NodeUtils.flattenBTToSkewed(node, order);
+
+	System.out.println("Right Skewed Binary Tree In Order Traversal : ");
+	NodeUtils.traverseRightSkewed(NodeUtils.headNode);
+	System.out.println();
+	System.out.println("Right Skewed Binary Tree In Ascending Order : ");
+	NodeUtils.traverseRightSkewed_ascending(NodeUtils.headNode);
 		
 		/*
 		 * 10

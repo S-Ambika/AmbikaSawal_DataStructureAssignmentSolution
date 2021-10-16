@@ -12,7 +12,7 @@ class Node {
 
 }
 
-class NodeUtils {
+public class NodeUtils {
 
 	static Node cur;
 
@@ -75,17 +75,12 @@ class NodeUtils {
 		System.out.print(root.val + " ");
 		traverseRightSkewed(root.right);
 	}
+
 	static void traverseRightSkewed(Node root) {
 		if (root == null) {
 			return;
 		}
-//		if (root.right != null && root.val > root.right.val) {
-//			int temp;
-//			temp = root.val;
-//			root.val = root.right.val;
-//			root.right.val = temp;
-//
-//		}
+
 		System.out.print(root.val + " ");
 		traverseRightSkewed(root.right);
 	}
