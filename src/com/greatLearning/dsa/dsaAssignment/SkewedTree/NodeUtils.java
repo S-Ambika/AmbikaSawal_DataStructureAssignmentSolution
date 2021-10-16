@@ -5,6 +5,9 @@ class Node {
 	int val;
 	Node left, right;
 
+	/*
+	 * Creating node
+	 */
 	public Node(int item) {
 		val = item;
 		left = right = null;
@@ -20,26 +23,30 @@ public class NodeUtils {
 	static Node prevNode = null;
 	static Node headNode = null;
 
-	static void flattenBTToSkewed(Node root, int order) {
+	static void skewedBT(Node root, int order) {
 
-// Base Case
+		/*
+		 * Base Case
+		 */
 		if (root == null) {
 			return;
 		}
 
-// Condition to check the order
-// in which the skewed tree to
-// maintained
+		/*
+		 * order in which the skewed tree to maintained
+		 */
+
 		if (order > 0) {
-			flattenBTToSkewed(root.right, order);
+			skewedBT(root.right, order);
 		} else {
-			flattenBTToSkewed(root.left, order);
+			skewedBT(root.left, order);
 		}
 		Node rightNode = root.right;
 		Node leftNode = root.left;
 
-// Condition to check if the root Node
-// of the skewed tree is not defined
+		/*
+		 * Condition to check if the root Node of the skewed tree is not defined
+		 */
 		if (headNode == null) {
 			headNode = root;
 			root.left = null;
@@ -50,17 +57,20 @@ public class NodeUtils {
 			prevNode = root;
 		}
 
-// Similarly recurse for the left / right
-// subtree on the basis of the order required
+		/*
+		 * Similarly recurse for the left / right subtree on the basis of the order
+		 * required
+		 */
 		if (order > 0) {
-			flattenBTToSkewed(leftNode, order);
+			skewedBT(leftNode, order);
 		} else {
-			flattenBTToSkewed(rightNode, order);
+			skewedBT(rightNode, order);
 		}
 	}
 
-// Function to traverse the right
-// skewed tree using recursion
+	/*
+	 * 
+	 */
 	static void traverseRightSkewed_ascending(Node root) {
 		if (root == null) {
 			return;
@@ -73,9 +83,12 @@ public class NodeUtils {
 
 		}
 		System.out.print(root.val + " ");
-		traverseRightSkewed(root.right);
+		traverseRightSkewed_ascending(root.right);
 	}
 
+	/*
+	 * 
+	 */
 	static void traverseRightSkewed(Node root) {
 		if (root == null) {
 			return;

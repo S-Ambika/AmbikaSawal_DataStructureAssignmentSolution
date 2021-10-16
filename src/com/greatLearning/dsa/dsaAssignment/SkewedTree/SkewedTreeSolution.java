@@ -20,7 +20,7 @@ class SkewedTreeSolution {
 	SkewedTreeSolution.node.right = new Node(60);
 	SkewedTreeSolution.node.left.left = new Node(10);
 	SkewedTreeSolution.node.right.left = new Node(40);
-	NodeUtils.flattenBTToSkewed(node, order);
+	NodeUtils.skewedBT(node, order);
 
 	System.out.println("Right Skewed Binary Tree In Order Traversal : ");
 	NodeUtils.traverseRightSkewed(NodeUtils.headNode);
