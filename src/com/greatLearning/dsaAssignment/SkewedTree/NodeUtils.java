@@ -16,7 +16,7 @@ class Node {
 
 public class NodeUtils {
 
-	static Node cur;
+	static Node curr;
 
 	static public Node node;
 	static Node prevNode = null;
