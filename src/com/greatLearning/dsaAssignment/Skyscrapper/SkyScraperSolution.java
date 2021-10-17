@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class SkyScrapperSolution {
+public class SkyScraperSolution {
 
 	static QueueUtils queueUtils;
 	static Queue<Integer> queue = new LinkedList<>();
@@ -69,19 +69,28 @@ public class SkyScrapperSolution {
 		System.out.println("Enter the total no. of floors in the building :");
 		Scanner scanner = new Scanner(System.in);
 		availableFloorSize = scanner.nextInt();
-		/*
-		 * Inserting values having distinct size of floor
-		 */
-		for (int i = 0; i < availableFloorSize; i++) {
-			System.out.println("Enter the floor size given on day : " + (i + 1));
-			int floor = scanner.nextInt();
-			queueUtils.enque(floor);
+		if (availableFloorSize > 0) {
+			/*
+			 * Inserting values having distinct size of floor
+			 */
+			for (int i = 0; i < availableFloorSize; i++) {
+				System.out.println("Enter the floor size given on day : " + (i + 1));
+				int floorSize = scanner.nextInt();
+				if (floorSize > 0) {
+					queueUtils.enque(floorSize);
+				} else {
+					System.out.println("Please enter some valid values!!!");
+					System.exit(1);
+				}
+			}
+			/*
+			 * Displaying floor size according to way they will get assembled
+			 */
+			System.out.println("\nFloor sizes in descending order, which can be assembled : \n");
+			assembleOrder();
+		} else {
+			System.out.println("Please enter some valid values!!!");
 		}
-		/*
-		 * Displaying floor size according to way they will get assembled
-		 */
-		System.out.println("The order of construction is as follows : \n");
-		assembleOrder();
 
 	}
 
