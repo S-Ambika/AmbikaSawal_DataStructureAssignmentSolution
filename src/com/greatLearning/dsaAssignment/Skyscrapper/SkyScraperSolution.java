@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class SkyScraperSolution {
+public class SkyscraperSolution {
 
 	static QueueUtils queueUtils;
 	static Queue<Integer> queue = new LinkedList<>();
