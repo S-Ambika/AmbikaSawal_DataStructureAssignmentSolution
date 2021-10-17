@@ -12,8 +12,7 @@ class Node {
 		val = item;
 		left = right = null;
 	}
-
-}
+	}
 
 public class NodeUtils {
 
@@ -69,7 +68,7 @@ public class NodeUtils {
 	}
 
 	/*
-	 * 
+	 * Traversing code to display elements in ascending order
 	 */
 	static void traverseRightSkewed_ascending(Node root) {
 		if (root == null) {
@@ -87,7 +86,7 @@ public class NodeUtils {
 	}
 
 	/*
-	 * 
+	 * Traversing code to display elements in In order
 	 */
 	static void traverseRightSkewed(Node root) {
 		if (root == null) {
