@@ -22,7 +22,7 @@ class SkewedTreeSolution {
 	SkewedTreeSolution.node.right.left = new Node(40);
 	NodeUtils.skewedBT(node, order);
 
-	System.out.println("Right Skewed Binary Tree In Order Traversal : ");
+	System.out.println("Right Skewed Binary Tree InOrder Traversal : ");
 	NodeUtils.traverseRightSkewed(NodeUtils.headNode);
 	System.out.println("\n");
 	System.out.println("Right Skewed Binary Tree In Ascending Order : ");
